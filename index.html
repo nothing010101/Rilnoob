@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$NOOB - Just a NOOB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😊</text></svg>">
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="banner-scroll">
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <div class="noob-text">
+                <div class="letter">N</div>
+                <div class="letter">O</div>
+                <div class="letter">O</div>
+                <div class="letter">B</div>
+            </div>
+        </div>
+
+        <!-- Center Content -->
+        <div class="center-content">
+            <div class="game-area">
+                <!-- Main Character -->
+                <div class="main-character">
+                    <div class="character-3d">
+                        <div class="character-head"></div>
+                        <div class="character-body"></div>
+                        <div class="character-arms">
+                            <div class="arm left-arm"></div>
+                            <div class="arm right-arm"></div>
+                        </div>
+                        <div class="character-legs">
+                            <div class="leg left-leg"></div>
+                            <div class="leg right-leg"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Elements -->
+                <div class="floating-elements">
+                    <div class="coin coin-1">R$</div>
+                    <div class="coin coin-2">R$</div>
+                    <div class="coin coin-3">R$</div>
+                </div>
+
+                <!-- Background Characters -->
+                <div class="bg-characters">
+                    <div class="bg-char char-1">
+                        <div class="mini-char">
+                            <div class="mini-head"></div>
+                            <div class="mini-body"></div>
+                        </div>
+                    </div>
+                    <div class="bg-char char-2">
+                        <div class="mini-char">
+                            <div class="mini-head yellow"></div>
+                            <div class="mini-body green"></div>
+                        </div>
+                    </div>
+                    <div class="bg-char char-3">
+                        <div class="mini-char">
+                            <div class="mini-head blue"></div>
+                            <div class="mini-body red"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Elements -->
+                <div class="interactive-elements">
+                    <div class="game-block block-1" onclick="playSound('click')"></div>
+                    <div class="game-block block-2" onclick="playSound('click')"></div>
+                    <div class="game-block block-3" onclick="playSound('click')"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="action-buttons">
+                <button class="action-btn community-btn" onclick="playSound('button')">
+                    <div class="btn-icon">😊</div>
+                    <span>COMMUNITY</span>
+                </button>
+                
+                <button class="action-btn buy-btn" onclick="playSound('button')">
+                    <div class="btn-icon">😊</div>
+                    <span>BUY</span>
+                </button>
+            </div>
+
+            <!-- Side Character -->
+            <div class="side-character">
+                <div class="side-char-3d">
+                    <div class="side-head"></div>
+                    <div class="side-body"></div>
+                    <div class="side-arms">
+                        <div class="side-arm"></div>
+                        <div class="side-arm right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Banner -->
+    <div class="bottom-banner">
+        <div class="banner-scroll reverse">
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+            <span>$NOOB</span>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="clickSound" preload="auto">
+        <source src="data:audio/wav;base64,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" type="audio/wav">
+    </audio>
+    <audio id="buttonSound" preload="auto">
+        <source src="data:audio/wav;base64,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" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
