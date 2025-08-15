@@ -14,7 +14,7 @@
         <meta property="og:type" content="website"/>
         <meta content="summary_large_image" name="twitter:card"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <link href="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383/css/depot-1-b85274096cabfe6473340a6017b389f.webflow.shared.7dda71c3b.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383/css/volvot-1-b85274096cabfe6473340a6017b389f.webflow.shared.7dda71c3b.css" rel="stylesheet" type="text/css"/>
         <script type="text/javascript">
             !function(o, c) {
                 var n = c.documentElement
@@ -26,8 +26,24 @@
         <link href="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383/688f8550e13cc0d3fc2693a3_favicon.svg" rel="shortcut icon" type="image/x-icon"/>
         <link href="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383/688f8550e13cc0d3fc2693a4_webclip.png" rel="apple-touch-icon"/>
         <style>
+            /* Volvot Logo Text Override */
+            .logo-text {
+                width: 80px;
+                height: 20px;
+                object-fit: contain;
+            }
+            
+            .preloader_logo {
+                width: 120px;
+                height: 30px;
+                object-fit: contain;
+            }
+            
+            .navbar_logo-text_block {
+                position: relative;
+                overflow: hidden;
+            }
             /* Custom Volvot Styles */
-            .volvot-gradient {
                 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             }
             .volvot-text-shadow {
@@ -40,6 +56,89 @@
             .volvot-glow {
                 box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
             }
+            
+            /* Fix layout issues */
+            .page-wrapper {
+                width: 100%;
+                overflow-x: hidden;
+            }
+            
+            .navbar_fixed {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+            
+            .section {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            
+            .hero-wrapper {
+                position: relative;
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 80px 20px 20px 20px;
+            }
+            
+            .modes-wrapper, .flip-cards-wrapper, .big-card-wrapper, 
+            .form-wrapper, .slogan-wrapper, .welcome-wrapper, .footer-wrapper {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
+            
+            .flip-cards-wrapper {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                padding: 40px 20px;
+            }
+            
+            .flip-card-wrapper {
+                width: 100%;
+            }
+            
+            .flip-card {
+                width: 100%;
+                height: 400px;
+                perspective: 1000px;
+            }
+            
+            .flip-card_front {
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+            
+            @media (max-width: 768px) {
+                .flip-cards-wrapper {
+                    grid-template-columns: 1fr;
+                }
+                
+                .hero_title h1 {
+                    font-size: 2.5rem;
+                }
+                
+                .modes_title h2 {
+                    font-size: 2rem;
+                }
+            }
         </style>
     </head>
     <body class="is-body-white">
@@ -51,8 +150,8 @@
                         <a href="/" aria-current="page" class="navbar_logo-block w-nav-brand w--current">
                             <img loading="lazy" src="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383/688f8550e13cc0d3fc269391_navbar_logo-icon.svg" alt="" class="logo-icon"/>
                             <div class="navbar_logo-text_block">
-                                <img style="opacity:0" loading="lazy" alt="" src="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383/688f8550e13cc0d3fc2693a6_logo-text-black.svg" class="logo-text is-scroll"/>
-                                <img style="opacity:1" loading="lazy" alt="" src="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383/688f8550e13cc0d3fc26938f_navbar_logo-text.svg" class="logo-text is-none"/>
+                                <img style="opacity:0" loading="lazy" alt="Volvot Logo" src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 20'%3E%3Ctext x='5' y='15' font-family='Arial, sans-serif' font-size='14' font-weight='bold' fill='black'%3EVOLVOT%3C/text%3E%3C/svg%3E" class="logo-text is-scroll"/>
+                                <img style="opacity:1" loading="lazy" alt="Volvot Logo" src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 20'%3E%3Ctext x='5' y='15' font-family='Arial, sans-serif' font-size='14' font-weight='bold' fill='white'%3EVOLVOT%3C/text%3E%3C/svg%3E" class="logo-text is-none"/>
                             </div>
                         </a>
                         <div class="navbar_button-block">
@@ -663,7 +762,7 @@
                                     </div>
                                 </div>
                                 <div class="footer_link_icon volvot">
-                                    <img src="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383/6890adbf3db8ab82ac165394_Coin%20Depot.svg" loading="lazy" alt="" class="icon"/>
+                                    <img src="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383/6890adbf3db8ab82ac165394_Coin%20Volvot.svg" loading="lazy" alt="" class="icon"/>
                                     <div class="link_icon_border"></div>
                                 </div>
                             </div>
@@ -825,13 +924,13 @@
         </div>
         <div class="preloader">
             <div class="preloader_content">
-                <div data-poster-url="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_depot%20preloader-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_depot%20preloader-transcode.mp4,https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_depot%20preloader-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="preloader_video w-background-video w-background-video-atom">
-                    <video id="5ac5afba-b047-2c0a-c18d-a8ece58adda3-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_depot%20preloader-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                        <source src="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_depot%20preloader-transcode.mp4" data-wf-ignore="true"/>
-                        <source src="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_depot%20preloader-transcode.webm" data-wf-ignore="true"/>
+                <div data-poster-url="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_volvot%20preloader-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_volvot%20preloader-transcode.mp4,https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_volvot%20preloader-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="preloader_video w-background-video w-background-video-atom">
+                    <video id="5ac5afba-b047-2c0a-c18d-a8ece58adda3-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_volvot%20preloader-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                        <source src="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_volvot%20preloader-transcode.mp4" data-wf-ignore="true"/>
+                        <source src="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383%2F6890bcfe10ca2535200bc8b2_volvot%20preloader-transcode.webm" data-wf-ignore="true"/>
                     </video>
                 </div>
-                <img src="https://cdn.prod.website-files.com/688f8550e13cc0d3fc269383/688f8550e13cc0d3fc26938f_navbar_logo-text.svg" loading="lazy" alt="" class="preloader_logo"/>
+                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 30'%3E%3Ctext x='10' y='20' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='white'%3EVOLVOT%3C/text%3E%3C/svg%3E" loading="lazy" alt="Volvot Logo" class="preloader_logo"/>
             </div>
         </div>
         <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=688f8550e13cc0d3fc269383" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -886,13 +985,4 @@
                 // Add parallax effect to hero
                 window.addEventListener('scroll', function() {
                     const scrolled = window.pageYOffset;
-                    const parallax = document.querySelector('.hero_img');
-                    if (parallax) {
-                        const speed = scrolled * 0.5;
-                        parallax.style.transform = `translateY(${speed}px)`;
-                    }
-                });
-            });
-        </script>
-    </body>
-</html>
+       
