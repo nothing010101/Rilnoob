@@ -43,7 +43,9 @@
                 position: relative;
                 overflow: hidden;
             }
+            
             /* Custom Volvot Styles */
+            .volvot-gradient {
                 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             }
             .volvot-text-shadow {
@@ -985,4 +987,13 @@
                 // Add parallax effect to hero
                 window.addEventListener('scroll', function() {
                     const scrolled = window.pageYOffset;
-       
+                    const parallax = document.querySelector('.hero_img');
+                    if (parallax) {
+                        const speed = scrolled * 0.5;
+                        parallax.style.transform = `translateY(${speed}px)`;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
